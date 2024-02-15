@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\bin\Debug\net8.0\NotHesaplamaUygulaması.exe
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\bin\Debug\net8.0\NotHesaplamaUygulaması.deps.json
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\bin\Debug\net8.0\NotHesaplamaUygulaması.runtimeconfig.json
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\bin\Debug\net8.0\NotHesaplamaUygulaması.dll
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\bin\Debug\net8.0\NotHesaplamaUygulaması.pdb
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.AssemblyInfo.cs
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.dll
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\refint\NotHesaplamaUygulaması.dll
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.pdb
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\NotHesaplamaUygulaması.genruntimeconfig.cache
+C:\Users\User\source\repos\NotHesaplamaUygulaması\NotHesaplamaUygulaması\obj\Debug\net8.0\ref\NotHesaplamaUygulaması.dll
