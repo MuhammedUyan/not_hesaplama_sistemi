@@ -26,12 +26,13 @@ namespace NotHesaplamaUygulaması
 			switch (choice)
 			{
 				case 1:
-					Console.Clear();
-					Console.Write("Dersin not sayısı (En düşün 2 en yüksek 5 olabilir!): ");
-					int numberOfNotes = Convert.ToInt32(Console.ReadLine());
-					Console.WriteLine();
-					Console.WriteLine("Dersi geçmek için gereken final notu: " + Score(numberOfNotes));
-					Console.WriteLine();
+					Score();
+					Console.WriteLine("Ana menüye dönmek için enter'a basın...");
+					Console.ReadLine();
+					HomePage();
+					return;
+				case 2:
+					SemesterAverage();
 					Console.WriteLine("Ana menüye dönmek için enter'a basın...");
 					Console.ReadLine();
 					HomePage();
@@ -50,27 +51,33 @@ namespace NotHesaplamaUygulaması
 
 
 		// Geçme notu gösterme fonksiyonu
-		public static double Score(int numberOfNotes)
+		public static void Score()
 		{
+			Console.Clear();
+			Console.Write("Dersin not sayısı (En düşün 2 en yüksek 5 olabilir!): ");
+			int numberOfNotes = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine();
+
 			if (numberOfNotes == 2)
 			{
-				return CalculatePassingScore(numberOfNotes);
+				Console.WriteLine("Dersi geçmek için gereken final notu: " + CalculatePassingScore(numberOfNotes));
 			}
 			else if (numberOfNotes == 3)
 			{
-				return CalculatePassingScore(numberOfNotes);
+				Console.WriteLine("Dersi geçmek için gereken final notu: " + CalculatePassingScore(numberOfNotes));
 			}
 			else if (numberOfNotes == 4)
 			{
-				return CalculatePassingScore(numberOfNotes);
+				Console.WriteLine("Dersi geçmek için gereken final notu: " + CalculatePassingScore(numberOfNotes));
 			}
 			else if (numberOfNotes == 5)
 			{
-				return CalculatePassingScore(numberOfNotes);
+				Console.WriteLine("Dersi geçmek için gereken final notu: " + CalculatePassingScore(numberOfNotes));
 			}
 			else
 			{
-				return 0.0;
+				Console.WriteLine("Geçersiz not sayısı!!!");
+				Score();
 			}
 		}
 
@@ -81,8 +88,8 @@ namespace NotHesaplamaUygulaması
 			double totalGrades = 0;
 			double passingScore;
 			int passingPercent = 100;
-			double[] grades = new double[4];
-			int[] percents = new int[4];
+			double[] grades = new double[numberOfNotes];
+			int[] percents = new int[numberOfNotes];
 
 			for (int i = 0; i < (numberOfNotes - 1); i++)
 			{
@@ -138,6 +145,81 @@ namespace NotHesaplamaUygulaması
 				}
 			}
 			return grade;
+		}
+
+		// Dönem ortalaması gösterme fonksiyonu
+		public static void SemesterAverage()
+		{
+			Console.Clear();
+			Console.WriteLine("Notların Katsayı Değerleri");
+			Console.WriteLine("[90,00 – 100,00 ] - AA -> 4.00");
+			Console.WriteLine("[85,00 - 89,99  ] - BA -> 3.50");
+			Console.WriteLine("[80,00 - 84,99  ] - BB -> 3.00");
+			Console.WriteLine("[75,00 - 79,99  ] - CB -> 2.50");
+			Console.WriteLine("[65,00 - 74,99  ] - CC -> 2.00");
+			Console.WriteLine("[58,00 - 64,99  ] - DC -> 1.50");
+			Console.WriteLine("[50,00 - 57,99  ] - DD -> 1.00");
+			Console.WriteLine("[40,00 - 49,99  ] - FD -> 0.50");
+			Console.WriteLine("[0     - 39,99  ] - FF -> 0.00");
+			Console.WriteLine();
+			Console.Write("Alınan ders sayısını giriniz[5-8]: ");
+			int lessonCount = Convert.ToInt32(Console.ReadLine());
+
+			if( lessonCount == 5 )
+			{
+				SemesterAverageCalculate(lessonCount);
+			}
+			else if (lessonCount == 6)
+			{
+				SemesterAverageCalculate(lessonCount);
+			}
+			else if(lessonCount == 7)
+			{
+				SemesterAverageCalculate(lessonCount);
+			}
+			else if (lessonCount == 8)
+			{
+				SemesterAverageCalculate(lessonCount);
+			}
+			else 
+			{
+				Console.WriteLine("Lütfen geçerli ders sayısı girin!!!");
+				SemesterAverage();
+			}
+		}
+
+		// Dönem ortalaması hesaplama fonksiyonu
+		public static double SemesterAverageCalculate(int lessonCount)
+		{
+			double average = 0.0;
+			int totalAkts = 0;
+			double[] grades = new double[lessonCount];
+			int[] akts = new int[lessonCount];
+			
+			for (int i = 0; i < lessonCount; i++)
+			{
+				Console.Write(i + 1 + "." + " notun katsayı değerini giriniz giriniz: ");
+				double factor = Convert.ToDouble(Console.ReadLine());
+				while(factor <= 0 || factor >= 4)
+				{
+					Console.WriteLine("Yanlış değer girdiniz!!! [0-4]");
+					Console.Write(i + 1 + "." + " notun katsayı değerini giriniz giriniz: ");
+					factor = Convert.ToDouble(Console.ReadLine());
+				}
+				grades[i] = factor;
+				Console.Write(i + 1 + "." + " notun AKTS değerini giriniz: ");
+				int aktsValue = Convert.ToInt32(Console.ReadLine());
+				while (aktsValue <= 0 || aktsValue >= 10)
+				{
+					Console.WriteLine("Yanlış değer girdiniz!!! [0-10]");
+					Console.Write(i + 1 + "." + " notun AKTS değerini giriniz: ");
+					aktsValue = Convert.ToInt32(Console.ReadLine());
+				}
+				akts[i] = aktsValue;
+				average += (grades[i] * akts[i]);
+				totalAkts += akts[i];
+			}
+			return (average / totalAkts);
 		}
 	}
 }
