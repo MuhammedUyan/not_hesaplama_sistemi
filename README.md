@@ -1,2 +1,2 @@
-# not_hesaplama_sistemi
- basit üniversite not hesaplama programı 
+# Not Hesaplama Programı
+ Basit üniversite not hesaplama programı 
